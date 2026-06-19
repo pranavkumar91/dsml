@@ -4,9 +4,18 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_core.messages import HumanMessage, AIMessage
 
+from rich.console import Console
+from rich.panel import Panel
+from rich.text import Text
+
+
+
 from dotenv import load_dotenv
 
 load_dotenv()
+
+console = Console()
+
 
 
 def validateTree():
@@ -71,7 +80,8 @@ if __name__ == "__main__":
                 "history": history 
             })
 
-            print("Bot:", response.content)
+            # print("Bot:", response.content)
+            console.print("[bold cyan]Bot: "+response.content+"[/bold cyan]")
             history.append(HumanMessage(content=user_input))
             history.append(AIMessage(content=response.content))
             # print()

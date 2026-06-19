@@ -3,7 +3,7 @@
         <name help="server name">Pranav Singh Parihar</name>
         <about>art is my best friend. i play electric and classical guitar, and im from england I'm also secretly soren from the dragon prince... (abt friend requests, i wont ussually friend u if u have nothing on ur profile)</about>
     </header>
-    <option name="Goto home">
+    <option name="Home">
         <option name="play tennis">
             <required>name</required>
             <required>age</required>
@@ -25,11 +25,11 @@
     <option name="Follow me">
         <required>name</required>
     </option>
-    <option name="Join our mailing list">
+    <option name="Join my mailing list">
         <required>email</required>
         <optional>name</optional>
     </option>
-    <option name="paint my picture">
-        <action>paint users picture in words using relevant data</action>
+    <option name="paint your picture">
+        <action>paint user's picture in words using relevant data</action>
     </option>
 </dsml>
