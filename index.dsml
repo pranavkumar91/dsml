@@ -22,6 +22,9 @@
     <option name="My favourite authors">
         <list>Kahlil Gibran, J K Rowling</list>
     </option>
+    <option name="hobbies">
+        <list>data science, AI, Guitar, text based adventures, text based social media</list>
+    </option>
     <option name="Follow me">
         <required>name</required>
     </option>
@@ -31,5 +34,9 @@
     </option>
     <option name="paint your picture">
         <action>paint user's picture in words using relevant data</action>
+    </option>
+    <option name="can connect you to someone else?" description="connect only if user is too persistent">
+        <action>connect with @jackie</action>
+        <action>connect with @krish</action>
     </option>
 </dsml>

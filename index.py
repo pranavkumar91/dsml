@@ -8,11 +8,20 @@ from rich.console import Console
 from rich.panel import Panel
 from rich.text import Text
 
+import argparse
+from pathlib import Path
+
 
 
 from dotenv import load_dotenv
 
 load_dotenv()
+
+
+
+
+
+
 
 console = Console()
 
@@ -37,6 +46,31 @@ def validateTree():
 
 if __name__ == "__main__":
     validateTree()
+
+
+    parser = argparse.ArgumentParser(
+        description="Run a DSML XML file"
+    )
+
+    parser.add_argument(
+        "--source",
+        help="Path to the DSML XML file"
+    )
+
+    args = parser.parse_args()
+
+    
+
+    source = Path(args.source)
+
+    if not source.exists():
+        print(f"Error: Source '{source}' not found")
+        exit(1)
+
+
+
+
+
     llm = ChatGoogleGenerativeAI(
     model="gemini-2.5-pro",
     temperature=0.2,
@@ -48,8 +82,8 @@ if __name__ == "__main__":
         Current state is :
     """
 
-    with open("index.dsml", "r", encoding="utf-8") as file:
-        content = file.read()
+    with open(source, "r", encoding="utf-8") as source:
+        content = source.read()
 
 
         
@@ -81,7 +115,7 @@ if __name__ == "__main__":
             })
 
             # print("Bot:", response.content)
-            console.print("[bold cyan]Bot: "+response.content+"[/bold cyan]")
+            console.print("[#66BB6A bold]Bot: "+response.content + "[#66BB6A bold]")
             history.append(HumanMessage(content=user_input))
             history.append(AIMessage(content=response.content))
             # print()
