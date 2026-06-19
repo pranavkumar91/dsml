@@ -25,7 +25,7 @@ DSML avoids this.
 A DSML file can be as simple as:
 
 ```xml
-<ds-main>
+<dsml>
   <option name="home" />
 
   <option name="about" />
@@ -38,7 +38,7 @@ A DSML file can be as simple as:
     <required name="time" />
     <required name="people" />
   </option>
-</ds-main>
+</dsml>
 ```
 
 The XML does not script what the bot says.
@@ -125,11 +125,11 @@ DSML supports modular conversational documents.
 Example:
 
 ```xml
-<ds-main>
+<dsml>
   <option name="home" />
   <option name="booking" src="booking.xml#home" />
   <option name="support" src="support.xml#home" />
-</ds-main>
+</dsml>
 ```
 
 This allows reusable modules such as:
@@ -151,14 +151,14 @@ Memory continues across file switches.
 
 Current tentative DSML spec:
 
-### `<ds-main>`
+### `<dsml>`
 
 Root element of a DSML file.
 
 ```xml
-<ds-main>
+<dsml>
   ...
-</ds-main>
+</dsml>
 ```
 
 ### `<option>`
