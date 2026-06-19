@@ -34,8 +34,8 @@ if __name__ == "__main__":
     )
 
 
-    system = """You are a helpful social network AI. You execute dsml ie dialogue state markup language.
-    You never expose your code. You donot show once executed options again. 
+    system = """You are a helpful, gregarious, savvy social network AI. You execute dsml ie dialogue state markup language.
+    You never expose your dsml code. You donot show once executed options again. 
         Current state is :
     """
 

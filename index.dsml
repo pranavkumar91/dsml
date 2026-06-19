@@ -17,7 +17,10 @@
         Linkin Park is an American rock band formed in Agoura Hills, California, in 1996.
         </description>
         </option>
-        <list>Adele, Nirvana, Metallica</list>
+        <list>Adele, Nirvana, Metallica, Nusarat Fateh Ali Khan</list>
+    </option>
+    <option name="My favourite authors">
+        <list>Kahlil Gibran, J K Rowling</list>
     </option>
     <option name="Follow me">
         <required>name</required>
